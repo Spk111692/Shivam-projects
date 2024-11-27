@@ -1,0 +1,81 @@
+<?php
+require 'connection.php';
+
+if(isset($_POST["submit"])){
+  $Name* = $_POST["name"];
+  $Gnder = $_POST["gender"];
+  $address = $_POST["address"];
+  $email = $_POST["email"];
+  $pincode = $_POST["pincode"];
+  $cardtype = $_POST["cardtype"];
+  $cardnumber = $_POST["cardnumber"];
+  $expirationdate = $_POST["expirationdate"];
+  $cvv = $_POST["cvv"];
+
+
+  INSERT INTO `bt_data` VALUES (`$id`, `$Name*`, `$Gender`, `$address`, `$email`, `$pincode`, `$cardtype`, `$cardnumber`, `$expirationdate`, `$CVV`);
+  echo
+  "
+  <script> alert('Data Inserted Successfully'); </script>
+  ";
+}
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment form</title>
+  <style>
+    h1{
+    color: brown;
+    }
+    
+    body{
+      background-color: cadetblue;
+    }
+
+  </style>
+</head>
+
+<body>
+  <form action=""method="post" autocomplete="off">
+    <h1>Payment Form</h1>
+    <h2>Contact Information</h2>
+    <p>Name:* <input type="text" name="name" required value=""></p>
+    <fieldset>
+      <legend>Gender</legend>
+    <p>
+      Male <input type="radio" name="Gender" value="Male"required>
+      Female <input type="radio" name="Gender" value="Female" required>
+    </p>
+    </fieldset>
+    <p>Address: <textarea name="address" value="address" cols="80" rows="7" required></textarea></p>
+    <p>Email: <input type="email" name="email" value="email" required></p>
+    <p>Pincode:- <input type="number" name="Pincode" value="Pincode" required></p>
+    <h2>Payment Information</h2>
+    <p>Card Tyoe:
+    <select name="Card_type" id="Card_type">
+      <option value="">---Select a Card Type---</option>
+      <option value="Visa">Visa</option>
+      <option value="MasterCard">MasterCard</option>
+      <option value="Rupay">Rupay</option>
+    </select>
+    </p>
+    <p>
+      Card Number: <input type="number" name="card_number" value="card_number" required>
+    </p>
+    <p>
+      Expiration Date: <input type="date" name="exp_date" value="exp_date" required>
+    </p>
+   <p>
+     CVV: <input type="password" name="cvv" id="cvv"></p>
+     <input type="submit" name="Pay Now">
+     <button class="btn"><a href="index1.html">HOME</a></button>
+  </form>
+
+</body>
+
+</html>

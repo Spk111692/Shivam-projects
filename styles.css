@@ -1,29 +1,91 @@
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(129, 120, 120, 0.75),rgba(136, 124, 124, 0.75)),url(img14.png);
+    background-size: cover;
+    background-position: center;
+}
 body {
-      background-image: url('BG.jpg');
+      background-color: #009688;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 
 h1 {
     color: rgb(191, 194, 27);
     font-size: 64px;
     text-align: center;
     text-underline-offset: 23;
+    
 }
 
 h2 {
     color: maroon;
-    font-size: 38px;
+    font-size: 38px;    
+    text-shadow:0px 0px 2px black;
 }
 
 h4 {
-    color: chocolate;
+    color: rgb(74, 38, 12);
     font-size: 32px;
 }
 
 li {
-    color: black;
+    color: rgb(17, 17, 16);
     font-size: 32px;
+    text-shadow:1px 1px 1px black;
+}
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Logo{
+    width: 150px;
+    height: 110px;
+    cursor: pointer;
+}
+.navbar h1{
+    font-size: 30px;
+    margin-top: center;
+}
+.navbar ul button{
+    width: 150px;
+    padding: 20px 20px;
+    text-align: center;
+    margin: 40px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.navbar ul button:hover span{
+    width: 100%;
+}
+.navbar ul button:hover{
+    border: none;
+}
+.navbar ul button a{
+    color: #fff;
 }
 
 a {
